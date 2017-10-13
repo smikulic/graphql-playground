@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GraphQL Demo - Posts</title>
+  
+  <!-- CSS (load bootstrap from a CDN) -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <style>
+      body { padding-top:50px; }
+  </style>
+</head>
+  <body class="container">
+    <h2>All Posts</h2>
+    <ul>
+      <% data.forEach(function(post) { %>
+        <li><%= post.id %> - <%= post.title %></li>
+      <% }); %>
+    </ul>
+    <div class="col-xs-6">
+      <a class="btn btn-info" role="button" href="/graphql/posts">Check out GraphQL request!</a>
+    </div>
+    <div class="col-xs-6">
+      <a class="btn btn-info" role="button" href="/playground">Check out playground!</a>
+    </div>
+  </body>
+</html>

@@ -4,6 +4,8 @@
 - psql -f setup_db.sql
 - yarn start
 - visit localhost:4000/playground
+- visit localhost:4000/posts
+- visit localhost:4000/graphql/posts
 
 ## Demo Query
 ```

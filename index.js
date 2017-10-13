@@ -18,6 +18,9 @@ const graphqlHTTP = require('express-graphql');
 const pg = require('pg');
 const pgpool = new pg.Pool({ database: 'graphql_demo' });
 
+// set the view engine to ejs
+app.set('view engine', 'ejs');
+
 // set up schema
 const userType = new GraphQLObjectType({
   name: 'User',
@@ -103,6 +106,29 @@ app.use('/playground', graphqlHTTP({
   schema: schema,
   graphiql: true,
 }));
+
+app.get('/posts', function(req, res) {
+  res.render('pages/posts', {
+    data: [
+      {
+        id: '1',
+        title: 'Dummy title!'
+      },
+      {
+        id: '2',
+        title: 'Another Dummy title.'
+      },
+    ]
+  });
+});
+
+app.get('/graphql/posts', function(req, res) {
+  res.render('pages/graphql_posts');
+});
+
+app.get('/', function(req, res) {
+  res.render('pages/index');
+});
 
 app.listen(4000, () => {
   console.log('Server is running on localhost:4000 ...');
