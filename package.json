@@ -2,7 +2,17 @@
   "name": "graphql-demo",
   "version": "1.0.0",
   "description": "Demo GraphQL server and client",
-  "main": "index.js",
   "author": "sinisamikulic <Sinisa.Mikulic@solarisbank.de>",
-  "license": "MIT"
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.11.7",
+    "nodemon": "^1.12.1",
+    "pg": "^7.3.0"
+  }
 }
