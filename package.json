@@ -1,0 +1,8 @@
+{
+  "name": "graphql-demo",
+  "version": "1.0.0",
+  "description": "Demo GraphQL server and client",
+  "main": "index.js",
+  "author": "sinisamikulic <Sinisa.Mikulic@solarisbank.de>",
+  "license": "MIT"
+}
